@@ -1,0 +1,7 @@
+model,condition,n,acc,pred_yes
+openrouter/anthropic/claude-opus-4.1,text,287,0.686411149825784,0.5365853658536586
+openrouter/anthropic/claude-opus-4.1,video,287,0.6829268292682927,0.47735191637630664
+openrouter/google/gemini-2.5-pro,text,280,0.55,0.6928571428571428
+openrouter/google/gemini-2.5-pro,video,283,0.4840989399293286,0.8303886925795053
+openrouter/openai/gpt-5,text,287,0.6933797909407665,0.5226480836236934
+openrouter/openai/gpt-5,video,287,0.7038327526132404,0.554006968641115

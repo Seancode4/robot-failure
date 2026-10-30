@@ -1,0 +1,18 @@
+# Python 3.11 (uv venv --python 3.11 .venv && uv pip install -r requirements.txt)
+
+# model APIs
+google-genai==2.33.0
+openai==3.37.0
+
+# data (TensorFlow + Beam are only needed for the one-time TFDS export in common/data.py)
+tensorflow==2.21.0
+tensorflow-datasets==4.9.10
+apache-beam==2.77.0
+importlib-resources==7.1.0
+
+# core
+pillow==12.3.0
+numpy==2.4.6
+pandas==3.1.0
+tqdm==4.70.1
+python-dotenv==1.2.4
