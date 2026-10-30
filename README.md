@@ -1,6 +1,6 @@
 # Diagnosing Safety Failures of Vision-Language Models on ASIMOV-2.0
 
-Two experiments on ASIMOV-2.0 (Jindal et al. 2025), a benchmark of whether
+Two experiments on ASIMOV-2.0, a benchmark of whether
 vision-language models respect physical safety. Both use the paper's
 comparison models: GPT-5, Gemini 2.5 Pro and Claude Opus 4.1.
 
@@ -11,8 +11,7 @@ points out objects it can interact with. Our plain-prompt results are
 consistent with the paper's, and we test whether prompting off-the-shelf models with the
 reasoning structure the paper fine-tuned into its own model reduces violations. We find that prompting for the 3-step reasoning template based on the paper's fine-tuned responses does not clearly change
 the strict violation rate, but it cuts clear violations by 5.6–8.5 points
-for every model. Gemini Robotics-ER 2, the successor to the paper's
-fine-tuned robotics model, has the lowest violation rates of the models we
+for every model. Gemini Robotics-ER 2 has the lowest violation rates of the models we
 ran with the plain prompt and gains nothing from the template.
 
 2. **Video experiment.**
@@ -253,7 +252,7 @@ of those images.
 
 | Component       | Details                                                                                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Data            | All 287 examples of `asimov_v2_videos`: 16 frames each (1280×720, 0–7.5 s at 2 fps), risk label Yes (94) / No (193). These 16 frames are all the video data released                                                      |
+| Data            | All 287 examples of `asimov_v2_videos`: 16 frames each, risk label Yes (94) / No (193). These 16 frames are all the video data released                                                      |
 | Describer       | Qwen3-VL-235B-A22B-Instruct, temperature 0, no thinking. Sees the 16 frames, each labeled "Frame at <t>s:", and writes a scene paragraph plus a timeline. Its prompt forbids risk language, interpretation and prediction |
 | Models          | GPT-5, Gemini 2.5 Pro, Opus 4.1 at the constraint experiment's settings; each at its API default image setting                                                                                                            |
 | Video condition | The 16 labeled frames, then the question                                                                                                                                                                                  |
@@ -413,7 +412,7 @@ points (Opus 4.1) and 40 (GPT-5). We see no drop for those two models. Why
 the difference is present in one scenario and not the other is an
 important question to investigate for multimodal reasoning. The comparisons
 differ in scenarios (our text describes the same video; the paper's text was
-the separate ASIMOV-Injury scenarios) and possibly question type (yes/no
+the ASIMOV-Injury scenarios) and possibly question type (yes/no
 risk here; the paper's text metric may be injury-type classification),
 so either could account for the gap.
 
